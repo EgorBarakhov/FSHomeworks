@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @tasklist.title %>
+</p>
+
+<h2>Tasks</h2>
+<% for task in @tasklist.tasks %>
+  <ul>
+    <li><%= task.description %></li>
+  </ul>
+<% end %>
+
+<%= link_to 'Edit', edit_tasklist_path(@tasklist) %> |
+<%= link_to 'Add Post', tasklist_tasks_path(@tasklist) %> |
+<%= link_to 'Back', tasklists_path %>
